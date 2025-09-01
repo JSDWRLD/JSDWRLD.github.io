@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Assignment 6 - Encrypt-It! | Fishkeeping 101</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Fishkeeping 101 - John's Submission</h1>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../fish-species.html">Fish Species</a></li>
+        <li><a href="../a5.html">Assignment 5</a></li>
+        <li><a href="encrypt-it.html" aria-current="page">Assignment 6</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Assignment 6: Encrypt-It!</h2>
+    <form>
+      <fieldset>
+        <legend>Text to Encrypt</legend>
+        <textarea id="input-text" rows="10" cols="60" placeholder="Enter your message to encrypt here"></textarea>
+      </fieldset>
+      <fieldset>
+        <legend>Encrypt Options</legend>
+        <p>
+          <strong>Cipher Type: </strong>
+          <select id="cipher-type">
+            <option value="shift">Shift Cipher</option>
+          </select>
+        </p>
+        <button type="button" id="encrypt-it">Encrypt It!</button>
+        <button type="reset" id="reset">Reset</button>
+      </fieldset>
+    </form>
+    <div id="result-area">
+      <h2>Result:</h2>
+      <p id="result"></p>
+    </div>
+  </main>
+  <footer>
+    <p>
+      &copy; 2025 Fishkeeping 101 |
+      <a href="../contact.html">Contact Us</a> |
+      <a href="../terms.html">Terms & Conditions</a> |
+      <a href="../accessibility.html">Accessibility</a>
+    </p>
+    <script src="encrypt-it.js"></script>
+  </footer>
+</body>
+
+</html>

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron|Lato');
 /* Reset some default styles */
 body,
 h1,
@@ -13,13 +14,17 @@ figcaption {
 }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'Lato', 'Segoe UI', Arial, sans-serif;
     background: #f4f8fb;
     color: #222;
     line-height: 1.6;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+button, select {
+    font-family: 'Lato', sans-serif;
 }
 
 header {
@@ -32,6 +37,9 @@ header {
 header h1 {
     margin-bottom: 0.5rem;
     font-size: 2.2rem;
+    font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+    text-shadow: 3px 3px #d92b6f, -3px -3px #047ab9;
+    animation: glitch 1s;
 }
 
 nav ul {
@@ -66,10 +74,46 @@ main {
 main h2 {
     color: #2e8bc0;
     margin-bottom: 1rem;
+    animation: fade-in-up 0.5s;
+    animation-fill-mode: both;
 }
 
 main p {
     margin-bottom: 1.5rem;
+    animation: fade-in-up 0.5s;
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+}
+/* Glitch animation for h1 */
+@keyframes glitch {
+    0% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    15% {
+        text-shadow: 1px 1px #d92b6f, -1px -1px #047ab9;
+    }
+    35% {
+        text-shadow: 10px 10px #047ab9, -10px -10px #d92b6f;
+    }
+    65% {
+        text-shadow: 1px 1px #d92b6f, -1px -1px #047ab9;
+    }
+    100% {
+        opacity: 1;
+        text-shadow: 3px 3px #d92b6f, -3px -3px #047ab9;
+    }
+}
+
+@keyframes fade-in-up {
+    from {
+        transform: translateY(8pt);
+        opacity: 0;
+    }
+    to {
+        transform: none;
+        opacity: 1;
+    }
 }
 
 figure {
